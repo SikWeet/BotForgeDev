@@ -1,0 +1,90 @@
+{% extends 'base.html' %}
+
+{% block title %}Auth{% endblock %}
+
+{% block body %}
+<style>
+    /* Общий фон */
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		background: linear-gradient(135deg, #6a11cb, #2575fc);
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+	}
+
+	/* Карточка авторизации */
+	.auth-card {
+		background: rgba(255, 255, 255, 0.1);
+		backdrop-filter: blur(15px);
+		padding: 50px 40px;
+		border-radius: 20px;
+		text-align: center;
+		box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+		max-width: 400px;
+		width: 90%;
+	}
+
+	/* Заголовок */
+	.auth-card h1 {
+		margin-bottom: 20px;
+		font-size: 2rem;
+	}
+
+	/* Текст */
+	.auth-card p {
+		margin-bottom: 30px;
+		font-size: 1.1rem;
+		line-height: 1.4;
+	}
+
+	/* Кнопка Telegram */
+	.btn-telegram {
+		display: inline-flex;
+		align-items: center;
+		gap: 10px;
+		background: linear-gradient(135deg, #00ACEE, #0088CC);
+		color: #fff;
+		font-weight: 600;
+		font-size: 1.1rem;
+		padding: 12px 25px;
+		border: none;
+		border-radius: 12px;
+		cursor: pointer;
+		text-decoration: none;
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	.btn-telegram:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+	}
+
+	/* Иконка Telegram */
+	.btn-telegram i {
+		font-size: 1.3rem;
+	}
+
+</style>
+
+	<div class="auth-card" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+		<h1 data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">Добро пожаловать в BotForge!</h1>
+		<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Для продолжения авторизуйтесь через Telegram:</p>
+		<a href="https://t.me/BotForgetOfficial_bot" target="_blank" class="btn-telegram" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+			<i class="bi bi-telegram"></i> Авторизоваться через Telegram
+		</a>
+	</div>
+<!-- 
+<script async src="https://telegram.org/js/telegram-widget.js?22" 
+			data-telegram-login="BotForgetOfficial_bot"
+			data-size="large" 
+			data-radius="20" 
+			data-auth-url="http://127.0.0.1:8000/auth/telegram" 
+			data-request-access="write">
+</script> -->
+
+{% endblock %}
